@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: blood-network
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/blood_network_db
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:mySecretKeyForBloodNetworkEmergencyAppWithHighSecurityStandards}
+  expiration: ${JWT_EXPIRATION:86400000} # 24 hours
+  refresh-secret: ${JWT_REFRESH_SECRET:myRefreshSecretKeyForBloodNetworkWithHighSecurity}
+  refresh-expiration: ${JWT_REFRESH_EXPIRATION:604800000} # 7 days
+
+# Rate Limiting Configuration
+rate-limiting:
+  capacity: 10
+  refill-tokens: 10
+  refill-interval-minutes: 1
+
+# CORS Configuration
+cors:
+  allowed-origins: http://localhost:3000,http://localhost:5173
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  allowed-headers: "*"
+  allow-credentials: true
+
+logging:
+  level:
+    com.bloodnetwork: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.data.mongodb: DEBUG
