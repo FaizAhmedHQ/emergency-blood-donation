@@ -47,7 +47,7 @@ echo.
 echo Then open browser and login as admin!
 echo.
 echo Login credentials:
-echo   Admin: admin@demo.com / password123
+echo   Admin: admin@bloodnetwork.com / password123
 echo.
 echo ============================================
 echo.

@@ -1,11 +1,11 @@
 $loginData = @{
-    email = "admin@example.com"
-    password = "Faiz@1234"
+    email = "admin@bloodnetwork.com"
+    password = "password123"
 } | ConvertTo-Json
 
 Write-Host "Testing login with credentials:" -ForegroundColor Cyan
-Write-Host "Email: admin@example.com" -ForegroundColor Yellow
-Write-Host "Password: Faiz@1234" -ForegroundColor Yellow
+Write-Host "Email: admin@bloodnetwork.com" -ForegroundColor Yellow
+Write-Host "Password: password123" -ForegroundColor Yellow
 Write-Host ""
 
 try {
